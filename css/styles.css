@@ -68,7 +68,7 @@ h1,
 h2,
 h3 {
     text-align: center;
-    margin-bottom: 80px;
+    margin-bottom: 40px;
 }
 
 h5 {
@@ -106,12 +106,11 @@ h5 {
     .servicios {
         display: grid;
         /*se divide un entero en tres tercios*/
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
         /*grid-templeate-columns: repeat(3,1fr); es lo mismo que la instrucción anterior*/
         /*version corta*/
         /*grid: 200px 800px / 300px 300px;*/
         /*column-gap sirve para agregar separación entre columnas de un grid*/
-        column-gap: 1rem;
     }
 }
 
@@ -119,10 +118,11 @@ h5 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 0 100px;
 }
 
 .servicio h3 {
-    color: var(--secundario);
+    color: #043c6d;
     font-weight: bold;
 }
 
@@ -154,8 +154,19 @@ h5 {
 .iconos{
     display: flex;
     justify-content: center;
+    margin-bottom: 20px;
 }
 
 .espaciado-abajo {
     margin-bottom: 50px;
+}
+
+.servicio .iconos {
+    height: 200px;
+    width:  200px;
+    background-color: #FFC107;
+    border-radius: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
