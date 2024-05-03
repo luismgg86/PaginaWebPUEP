@@ -1,0 +1,161 @@
+/* Para los links de la barra de navegación */
+.navbar-nav .nav-link {
+    color: rgba(255, 255, 255); /* Color del texto inicial  */
+    position: relative; /* Ajusta la posición del link */
+}
+/*Barra que aparece como hover en los links*/
+.navbar-nav .nav-link::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0; /* La barra inicialmente está oculta */
+    height: 2px; /* Grosor de la barra */
+    background-color: rgb(255, 255, 255); /* Color de la barra */
+    transition: width 0.3s ease; /* Transición de la anchura al pasar el ratón */
+}
+
+.navbar-nav .nav-link:hover::before {
+    width: 100%;
+    /* Muestra la barra al pasar el ratón */
+}
+
+.encabezado {
+    background-color: #043c6d;
+    background-image: url('/img/logo_1.png'), url('/img/logo_2.png'); /* Agrega la segunda imagen */
+    background-position: left center, right center; /* Posición de las imágenes */
+    background-repeat: no-repeat; 
+    height: 100px;  
+}
+
+.busqueda-input {
+    padding-right: 30px; /* Ajusta el espacio para el icono de búsqueda */
+}
+
+.impression {
+    background-repeat: no-repeat;
+    background-image: url(/img/first.svg); /*imagen de fondo*/
+    background-size: cover;
+    background-position-y: -2000px;
+    height: 450px;
+    position: relative;
+    margin-bottom: 5rem;
+    background-attachment: fixed; /* Fijar la imagen de fondo */
+    background-position: center; /* Posición inicial de la imagen */
+}
+
+.contenido-impression {
+    position: absolute; /*con el cuarto valor de rgb() se define el nivel de transparencia*/
+    background-color: rgb(0, 0, 0, 0.6);
+    /**sintaxis anterior**/
+    background-color: rgb(0 0 0 / 50%);
+    width: 100%;
+    height: 100%;
+
+    /*cuando se quiera alinear vertical y horizontalmente, este código es muy útil*/
+    display: flex;
+    flex-direction: column; /*para poner el contenido en una columna*/
+    align-items: center; /*para alinear los elemento en el centro (horizontalmente)*/
+    justify-content: center; /*para alinear los elementos en el centro (verticalmente)*/
+}
+
+.contenido-impression h2,
+.contenido-impression p {
+    color: white;
+}       
+
+h1,
+h2,
+h3 {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+h5 {
+    padding-top: 20px;
+    text-align: center;
+}
+
+.contenedor {
+    max-width: 90rem;
+    /*toma 1200 pixeles como máximo si solamente hay ese espacio disponible, si no toma el 100%*/
+    /*margin-top:0;
+    margin-right: auto; 
+    margin-bottom:0;
+    margin-left: auto;*/
+    /*es lo mismo que la linea de abajo*/
+
+    /*si solo se pone margin, los valores se asignan en sentido de las manecillas del reloj*/
+    /*Toma primero los valores top y bottom para despues tomar right y left*/
+    margin: 0 auto;
+}
+
+.sombra {
+    /*se puede checar en "Can i use" si se pueden usar ciertas propiedades de CSS como estas en ciertos navegadores*/
+    -webkit-box-shadow: 0px 5px 15px 0px rgba(133, 130, 133, 0.51);
+    -moz-box-shadow: 0px 5px 15px 0px rgba(133, 130, 133, 0.51);
+    box-shadow: 0px 5px 15px 0px rgba(133, 130, 133, 0.51);
+    background-color: var(--blanco);
+    /*paddign para que "Mis servicios" no quede pegadoa la parte superior del contenedor*/
+    padding: 2rem;
+    /*para los bordes redondeados de la sombra*/
+    border-radius: 1rem;
+}
+
+@media (min-width: 768px) {
+    .servicios {
+        display: grid;
+        /*se divide un entero en tres tercios*/
+        grid-template-columns: 1fr 1fr 1fr;
+        /*grid-templeate-columns: repeat(3,1fr); es lo mismo que la instrucción anterior*/
+        /*version corta*/
+        /*grid: 200px 800px / 300px 300px;*/
+        /*column-gap sirve para agregar separación entre columnas de un grid*/
+        column-gap: 1rem;
+    }
+}
+
+.servicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.servicio h3 {
+    color: var(--secundario);
+    font-weight: bold;
+}
+
+.servicio p {
+    /*interlineado en los parrafos*/
+    line-height: 2;
+    text-align: center;
+}
+
+.footer{
+    margin-top: 50px;
+}
+
+.footer .aviso {
+    padding-top: 10px;
+    height: 130px;
+    text-align: center;
+    font-size: small;
+    color: white;
+    background-color: black;
+}
+
+.footer .redes {
+    height: 100px;
+    background-color: rgb(0, 0, 0, .2);
+    margin: 0px;
+}
+
+.iconos{
+    display: flex;
+    justify-content: center;
+}
+
+.espaciado-abajo {
+    margin-bottom: 50px;
+}
