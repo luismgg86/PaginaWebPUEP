@@ -126,6 +126,11 @@ h5 {
     font-weight: bold;
 }
 
+h3 {
+    color: #043c6d;
+    font-weight: bold;
+}
+
 .servicio p {
     /*interlineado en los parrafos*/
     line-height: 2;
@@ -170,3 +175,54 @@ h5 {
     justify-content: space-evenly;
     align-items: center;
 }
+
+
+.contenedor-linea { 
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative; /* Altura del contenedor */
+  }
+  
+  .linea {
+    width: 80%;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 1px; /* Grosor de la línea */
+    background-color: #ccc; /* Color de la línea */
+  }
+
+  .contenedor-convocatoria{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 50px;
+    gap: 100px;
+  }
+
+  .convocatoria{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .item {
+    margin: 5px; /* Añade un margen entre los elementos */
+  }
+
+  .item.large {
+    flex: 0 0 50%; /* Ocupa la mitad del espacio disponible */
+    width: 450px;
+    height: 600px;
+    padding: 10px;
+  }
+
+  .enlace-imagen img {
+    transition: transform 0.3s ease; /* Transición suave para el cambio de tamaño */
+  }
+
+  .enlace-imagen:hover img {
+    transform: scale(1.1); /* Cambia el tamaño de la imagen al 110% */
+    transition: transform 0.3s ease; /* Agrega una transición suave */
+  }
+  
