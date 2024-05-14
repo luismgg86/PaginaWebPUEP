@@ -212,8 +212,8 @@ h3 {
 
   .item.large {
     flex: 0 0 50%; /* Ocupa la mitad del espacio disponible */
-    width: 450px;
-    height: 600px;
+    width: 350px;
+    height: 500px;
     padding: 10px;
   }
 
