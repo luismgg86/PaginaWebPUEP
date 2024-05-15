@@ -20,6 +20,7 @@
     /* Muestra la barra al pasar el ratón */
 }
 
+
 .encabezado {
     background-color: #043c6d;
     background-image: url('/img/logo_1.png'), url('/img/logo_2.png'); /* Agrega la segunda imagen */
@@ -39,7 +40,7 @@
     background-position-y: -2000px;
     height: 450px;
     position: relative;
-    margin-bottom: 5rem;
+    margin-bottom: 40px;
     background-attachment: fixed; /* Fijar la imagen de fondo */
     background-position: center; /* Posición inicial de la imagen */
 }
@@ -163,7 +164,7 @@ h3 {
 }
 
 .espaciado-abajo {
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 
 .servicio .iconos {
@@ -185,6 +186,7 @@ h3 {
   }
   
   .linea {
+    margin: 50px 0;
     width: 80%;
     padding-left: 10px;
     padding-right: 10px;
@@ -224,5 +226,10 @@ h3 {
   .enlace-imagen:hover img {
     transform: scale(1.1); /* Cambia el tamaño de la imagen al 110% */
     transition: transform 0.3s ease; /* Agrega una transición suave */
+  }
+
+  .encabezado {
+    height: 100px;
+    transition: height 0.3s ease; /* Agrega una transición de 0.3 segundos */
   }
   
