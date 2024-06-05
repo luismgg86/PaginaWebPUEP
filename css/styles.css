@@ -91,6 +91,20 @@ h5 {
     margin: 0 auto;
 }
 
+.contenedor {
+    max-width: 100%;
+    /*toma 1200 pixeles como máximo si solamente hay ese espacio disponible, si no toma el 100%*/
+    /*margin-top:0;
+    margin-right: auto; 
+    margin-bottom:0;
+    margin-left: auto;*/
+    /*es lo mismo que la linea de abajo*/
+
+    /*si solo se pone margin, los valores se asignan en sentido de las manecillas del reloj*/
+    /*Toma primero los valores top y bottom para despues tomar right y left*/
+    margin: 0 auto;
+}
+
 .sombra {
     /*se puede checar en "Can i use" si se pueden usar ciertas propiedades de CSS como estas en ciertos navegadores*/
     -webkit-box-shadow: 0px 5px 15px 0px rgba(133, 130, 133, 0.51);
@@ -104,7 +118,7 @@ h5 {
 }
 
 @media (min-width: 768px) {
-    .servicios {
+    .items {
         display: grid;
         /*se divide un entero en tres tercios*/
         grid-template-columns: 1fr 1fr;
@@ -115,14 +129,14 @@ h5 {
     }
 }
 
-.servicio {
+.item {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 0 100px;
 }
 
-.servicio h3 {
+.item h3 {
     color: #043c6d;
     font-weight: bold;
 }
@@ -132,7 +146,7 @@ h3 {
     font-weight: bold;
 }
 
-.servicio p {
+.item p {
     /*interlineado en los parrafos*/
     line-height: 2;
     text-align: center;
@@ -167,7 +181,7 @@ h3 {
     margin-bottom: 20px;
 }
 
-.servicio .iconos {
+.item .iconos {
     height: 200px;
     width:  200px;
     background-color: #FFC107;
@@ -207,11 +221,6 @@ h3 {
     flex-direction: column;
     gap: 20px;
   }
-
-  .item {
-    margin: 5px; /* Añade un margen entre los elementos */
-  }
-
   .item.large {
     flex: 0 0 50%; /* Ocupa la mitad del espacio disponible */
     width: 350px;
@@ -233,3 +242,22 @@ h3 {
     transition: height 0.3s ease; /* Agrega una transición de 0.3 segundos */
   }
   
+
+  @media (min-width: 768px) {
+    .sitios {
+        display: grid;
+        height: 300px;
+        /*se divide un entero en tres tercios*/
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        /*grid-templeate-columns: repeat(3,1fr); es lo mismo que la instrucción anterior*/
+        /*version corta*/
+        /*grid: 200px 800px / 300px 300px;*/
+        /*column-gap sirve para agregar separación entre columnas de un grid*/
+    }
+}
+
+.sitio {
+    display: flex;
+    align-items: center;
+    margin: 0 100px;
+}
