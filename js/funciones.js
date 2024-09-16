@@ -11,7 +11,6 @@ window.onscroll = function() {
   if (currentScrollPos === 0) {
     encabezado.style.height = "100px";
     navbar.style.position = "static";
-    navbarNav.classList.add('ms-auto');
   } else {
     encabezado.style.height = "0px";
     navbar.style.position = "fixed";
